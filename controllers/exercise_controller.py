@@ -72,5 +72,5 @@ def toggle_completed(id):
     exercise.completed = not exercise.completed
     db.session.commit()
     if exercise.completed:
-        flash(f"Well done on completing this exercise! It has been marked as complete")
+        flash(f"Well done on completing this exercise! Keep up the good work!")
     return redirect("/exercises")

@@ -27,10 +27,10 @@
             <td><a href="/exercises/{{exercise.id}}">{{ exercise.name }}</a></td>
             <td>{{ exercise.sets }}</td>
             <td>{{ exercise.reps }}</td>
-            <td><form action="/exercises/{{ exercise.id }}/toggle_completed" method="POST">
+            <td class="table-button"><form action="/exercises/{{ exercise.id }}/toggle_completed" method="POST">
               <input type="submit" value="Mark as incomplete"></form></td>
-            <td><a href="/exercises/{{ exercise.id }}/edit">Edit</a></td>
-            <td><form action="/exercises/{{ exercise.id }}/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this exercise?')">
+            <td class="table-button"><a href="/exercises/{{ exercise.id }}/edit">Edit</a></td>
+            <td class="table-button"><form action="/exercises/{{ exercise.id }}/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this exercise?')">
               <input type="submit" value="Delete">
             </form></td>
           </tr>
@@ -52,11 +52,11 @@
               <td><a href="/exercises/{{exercise.id}}">{{ exercise.name }}</a></td>
               <td>{{ exercise.sets }}</td>
               <td>{{ exercise.reps }}</td>
-              <td><form action="/exercises/{{ exercise.id }}/toggle_completed" method="POST">
+              <td class="table-button"><form action="/exercises/{{ exercise.id }}/toggle_completed" method="POST">
             <input type="submit" value="Mark as complete"></form></td>
-              <td><a href="/exercises/{{ exercise.id }}/edit">Edit</a></td>
-              <td><form action="/exercises/{{ exercise.id }}/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this exercise?')">
-                <input type="submit" value="Delete">
+              <td class="table-button"><a href="/exercises/{{ exercise.id }}/edit">Edit</a></td>
+              <td class="table-button"><form action="/exercises/{{ exercise.id }}/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this exercise?')">
+                <input type="submit" value="Delete" class="table-button">
               </form></td>
             </tr>
           {% endif %}

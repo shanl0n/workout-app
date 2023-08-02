@@ -1,11 +1,13 @@
 {% extends 'base.jinja' %}
 
 {% block content %}
-    <div>
+<div class="centered-flex">
+    <div class="show-exercise">
         <h1>Exercise name: {{ exercise.name }}</h1>
         <h2>Sets: {{ exercise.sets }}</h2>
         <h2>Reps: {{ exercise.reps }}</h2>
         <p>Completed: {{ exercise.completed }}</p>
         <a href="/exercises/{{ exercise.id }}/edit">Edit</a>
     </div>
+</div>
 {% endblock %}

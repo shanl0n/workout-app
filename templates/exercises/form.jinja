@@ -20,9 +20,7 @@
                 type="text" 
                 id="name" 
                 name="name"
-                {% if exercise %}
                 value="{{ exercise.name }}"
-                {% endif %}
                 required
                 autofocus 
             />
@@ -35,9 +33,7 @@
                 max="100"
                 id="sets" 
                 name="sets"
-                {% if exercise is defined %}
                 value="{{ exercise.sets }}"
-                {% endif %}
                 required/>
         </div>
         <div>
@@ -48,9 +44,7 @@
                 max="100"
                 id="reps" 
                 name="reps"
-                {% if exercise %}
                 value="{{ exercise.reps }}"
-                {% endif %}
                 required/>
         </div>
         <div>
@@ -69,7 +63,7 @@
                 {% endfor %}
             </select>
         </div>
-        <button type="submit">Edit Exercise</button>
+        <button type="submit" class="button bg-black margin-top">Submit</button>
     </form>
 </div>
 </div>

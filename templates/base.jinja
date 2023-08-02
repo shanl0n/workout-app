@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Assistant</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+        <nav>
+          <img src='/static/images/logo.png' alt='Official logo'>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/exercises">My Workout</a></li>
+                <li><a href="/exercises/new">Add Exercise</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section-box">
+      {% block content %}
+      {% endblock%}
+    </section>
+  </body>
+  <footer>
+    <img src="/static/images/logo3.png" alt="official footer logo">
+  </footer>
+</html>

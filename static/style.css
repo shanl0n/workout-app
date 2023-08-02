@@ -40,7 +40,6 @@ body {
   background: url('/static/images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fd7014;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   padding: 0px;
   margin: 0px;
@@ -53,6 +52,7 @@ body {
 
 nav {
   display: flex;
+  background-color: black;
 }
 
 .menu {
@@ -76,7 +76,6 @@ tr {
   border-bottom: 1px solid #a5a5a5;
   border-right: 1px solid #a5a5a5;
   border-left: 1px solid #a5a5a5;
-  color: #fd7014;
 }
 
 td {
@@ -88,25 +87,25 @@ a {
   color: #fd7014;
   margin: 0 -.25rem;
   padding: 0 .25rem;
-  
   text-decoration: none;
 }
+
 a:hover {
   box-shadow: inset 100% 0 0 0 #54b3d6;
   color: white;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-.new-exercise {
+.exercise-form {
   margin-top: 30px;
   font-size: large;
   text-align: center;
   border-radius: 5px;
   color: black;
-  background-color: #fd7014;
   border-color: fd7014;
   padding: 1rem;
   align-items: center;
+  height: min-content;
 }
 
 input {
@@ -139,7 +138,6 @@ footer {
   margin: auto;
   width: 50%;
   color: rgb(0, 0, 0);
-  background-color: #fd7014;
   text-align: center;
   border-radius: 1rem;
   justify-content: space-between;
@@ -147,7 +145,6 @@ footer {
 
 .flash-msg {
   color: black;
-  background-color: #fd7014;
   padding: 1rem;
   border-radius: 5px;
   margin: auto;
@@ -163,4 +160,20 @@ h2 {
 
 .tables-container {
   padding-top: 3rem;
+}
+
+.section-box {
+  display: contents;
+}
+
+th {
+  padding: 6px 12px;
+}
+
+.font-orange {
+  color: #fd7014;
+}
+
+.bg-orange {
+  background-color: #fd7014;
 }

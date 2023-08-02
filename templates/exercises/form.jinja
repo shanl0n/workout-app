@@ -2,9 +2,14 @@
 
 {% block content %}
 <div class="centered-flex">
-<div class="new-exercise">
-    <h1>Edit: {{ exercise.name }}</h1>
-    {% if exercise is defined %}
+<div class="exercise-form bg-orange">
+    {% if exercise %}
+        <h1>Edit: {{ exercise.name }}</h1>
+    {% else %}
+        <h1>Add exercise:</h1>
+    {% endif %}
+
+    {% if exercise %}
     <form action="/exercises/{{ exercise.id }}" method="POST">
     {% else %}
     <form action="/exercises" method="POST">
@@ -15,7 +20,7 @@
                 type="text" 
                 id="name" 
                 name="name"
-                {% if exercise is defined %}
+                {% if exercise %}
                 value="{{ exercise.name }}"
                 {% endif %}
                 required
@@ -43,12 +48,11 @@
                 max="100"
                 id="reps" 
                 name="reps"
-                {% if exercise is defined %}
+                {% if exercise %}
                 value="{{ exercise.reps }}"
                 {% endif %}
                 required/>
         </div>
-        {% if exercise is defined %}
         <div>
             <label for="completed">Completed:</label>
             <input 
@@ -57,7 +61,6 @@
                 name="completed" 
                 {% if exercise.completed %}checked{% endif %}/>
         </div>
-        {% endif %}
         <div>
             <label for="athlete">Athlete:</label>
             <select name="athlete_id">

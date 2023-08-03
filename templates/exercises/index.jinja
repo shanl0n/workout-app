@@ -1,6 +1,7 @@
 {% extends 'base.jinja' %}
 
 {% block content %} 
+{# Flashed message #}
 {% with messages = get_flashed_messages() %}
   {% if messages %}
   <div class="flash-container">
@@ -55,10 +56,8 @@
               <td><form action="/exercises/{{ exercise.id }}/toggle_completed" method="POST">
                 <input type="submit" value="Complete" class="button bg-orange"></form></td>
               <td><a href="/exercises/{{ exercise.id }}/edit" class="button bg-orange">Edit</a></td>
-
               <td><form action="/exercises/{{ exercise.id }}/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this exercise?')">
                 <input type="submit" value="Delete" class="button bg-orange">
-
               </form></td>
             </tr>
           {% endif %}
@@ -66,5 +65,4 @@
     </table>
     <div class="completed-table"></div>
   </div>
-</div>
 {% endblock %}

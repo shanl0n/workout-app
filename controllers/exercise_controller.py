@@ -2,8 +2,16 @@ from flask import Flask, render_template, request, redirect, flash
 from flask import Blueprint
 from models import Exercise, Athlete
 from app import db
+import random
 
 exercises_blueprint = Blueprint("exercises", __name__)
+
+motivations = [
+    "Take care of your body. It’s the only place you have to live.",
+"Don't stop when you're tired. Stop when you're done.",
+"I got 99 problems, but I'm going to the gym to ignore all of them",
+"You did not wake up today to be mediocre",
+"Don't tell people your plans, show them your results."]
 
 @exercises_blueprint.route("/exercises")
 def exercises():
@@ -72,5 +80,5 @@ def toggle_completed(id):
     exercise.completed = not exercise.completed
     db.session.commit()
     if exercise.completed:
-        flash(f"Well done on completing this exercise! Keep up the good work!")
+        flash(random.choice(motivations))
     return redirect("/exercises")

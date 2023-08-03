@@ -3,12 +3,12 @@
 {% block content %}
 <div class="centered-flex">
 <div class="exercise-form bg-orange">
+{# This allows me to keep code DRY and resuse the same form #}
     {% if exercise %}
         <h1>Edit: {{ exercise.name }}</h1>
     {% else %}
         <h1>Add exercise:</h1>
     {% endif %}
-
     {% if exercise %}
     <form action="/exercises/{{ exercise.id }}" method="POST">
     {% else %}

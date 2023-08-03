@@ -4,10 +4,10 @@
 <div class="centered-flex">
     <div class="show-exercise">
         <h1>Exercise name: {{ exercise.name }}</h1>
-        <h2>Sets: {{ exercise.sets }}</h2>
-        <h2>Reps: {{ exercise.reps }}</h2>
-        <p>Completed: {{ exercise.completed }}</p>
-        <a href="/exercises/{{ exercise.id }}/edit">Edit</a>
+        <h3>Sets: {{ exercise.sets }}</h3>
+        <h3>Reps: {{ exercise.reps }}</h3>
+        <h3>Completed: {{ exercise.completed }}</h3>
+        <div class="margin-top margin-bottom"><a href="/exercises/{{ exercise.id }}/edit" class="button bg-orange">Edit</a></div>
     </div>
 </div>
 {% endblock %}
